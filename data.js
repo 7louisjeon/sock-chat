@@ -3,7 +3,7 @@ const fs = require("fs");
 module.exports = (filePath) => {
   dataToRead = fs.readFileSync(filePath, { encoding: "utf-8" });
 
-  const rows = dataToRead.split("\n");
+  const rows = dataToRead.split("\r\n");
   const headers = rows[0].split(",");
 
   const rowsData = [];
